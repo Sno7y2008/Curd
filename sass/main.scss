@@ -1,0 +1,127 @@
+@use "global/mixins" as *;
+@use "global/rest" as *;
+@use "global/vars" as color;
+
+
+.data {
+    width: 100%;
+    height: 270px;
+    background-color: color.$dark_1;
+
+    .logo {
+        width: 100%;
+        height: 50px;
+        color: color.$blue_1;
+        font-size: 1.5em;
+        @include center;
+    }
+
+    .e404 {
+        width: 230px;
+        height: 40px;
+        background-color: color.$grays_2;
+        position: absolute;
+        margin-left: 80%;
+        margin-top: 20px;
+        border-radius: 10px;
+        opacity: 0;
+        @include center;
+        @include shadow;
+
+        .mag {
+            font-size: 19px;
+            color: rgb(219, 23, 23);
+        }
+    }
+
+    .name {
+        margin-top: 50px;
+        @include center;
+
+        #product_name {
+            width: 750px;
+            height: 35px;
+            font-size: 17px;
+            border-radius: 10px;
+            background-color: color.$grays_2;
+            @include padding;
+            @include shadow;
+        }
+
+    }
+
+    .inputs {
+        margin-top: 60px; 
+        @include way(space-evenly);
+
+        .num {
+            font-size: 16px;
+            @include shadow;
+            @include padding;
+        }
+
+        .btns {
+            #add {
+                width: 100px;
+                height: 30px;
+                font-size: 1em;
+                font-weight: bold;
+                text-align: center;
+                cursor: pointer;
+                transition: 0.5s;
+                @include padding;
+
+                &:hover {
+                    background-color: rgba(0, 238, 91, 0.808);
+                }
+            }
+
+            .total {
+                margin-right: 15px;
+                font-size: 1em;
+                font-weight: bold;
+                color: color.$blue_1;
+
+                .money {
+                    color: rgb(6, 187, 6);
+                }
+            }
+        }
+    }
+}
+
+
+.table {
+    @include center;
+
+    .main {
+        @include center;
+        flex-wrap: wrap;
+        .row2, .row1, .row3 {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            justify-content: space-around;
+            width: 99.9vw;
+            text-align: center;
+        }
+
+        .row1 {
+            @include typo;
+        }
+
+        .row2, .row3 {
+            @include typo1;
+        }
+    }
+}
+
+
+i {
+    transition: 0.5s;
+    cursor: pointer;
+                            
+    &:hover {
+        color: rgba(192, 4, 4, 0.808);
+    }
+}
+

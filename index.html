@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/main.css">
+    <script src="https://kit.fontawesome.com/a2e5a25eb0.js" crossorigin="anonymous"></script>
+    <title>Curds</title>
+</head>
+<body>
+    <div class="data">
+        <div class="logo">
+            <span class="img1">Logo</span>
+            <div class="e404">
+                <span class="mag">Please Complete Filds !</span>
+            </div>
+        </div>
+        <div class="name">
+            <input type="text" name="" id="product_name" placeholder="Product Name..." required>
+        </div>
+        <div class="inputs">
+            <input type="number" name="" id="price" class="num" placeholder="Price..." onkeyup="getTotal()" required>
+            <input type="number" name="" id="taxs" class="num" placeholder="Taxs..." onkeyup="getTotal()">
+            <input type="number" name="" id="ads" class="num" placeholder="Ads..." onkeyup="getTotal()">
+            <input type="number" name="" id="discount" class="num" placeholder="Discount..." onkeyup="getTotal()">
+            
+            <div class="btns">
+                <span class="total">Total: <span class="money">0$</span></span>
+                <button id="add" type="button">Add</button>
+            </div>
+        </div>
+    </div>
+    <div class="table">
+        <table class="main">
+            <tr class="row1">
+                <td clas="cell">Name</td>
+                <td clas="cell">Price</td>
+                <td clas="cell">Taxs</td>
+                <td clas="cell">Ads</td>
+                <td clas="cell">Discount</td>
+                <td clas="cell">Total</td>
+                <td clas="cell">Edit</td>
+                <td clas="cell">Remove</td>
+            </tr>
+            <tr class="row2">
+                <td clas="cell">phone</td>
+                <td clas="cell right">50$</td>
+                <td clas="cell right">10$</td>
+                <td clas="cell">20$</td>
+                <td clas="cell">5%</td>
+                <td clas="cell">45$</td>
+                <td clas="cell"><i class="fa-solid fa-pen-to-square" id="edit"></i></td>
+                <td clas="cell"><i class="fa-solid fa-trash-can"></i></td>
+            </tr>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

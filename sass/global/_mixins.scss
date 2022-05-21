@@ -1,0 +1,41 @@
+@use "vars" as color;
+
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin way($space) {
+    display: flex;
+    justify-content: $space;
+    align-items: center;
+}
+
+
+@mixin padding {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: color.$grays_2;
+}
+
+@mixin shadow {
+    box-shadow: 2px 2px 5px rgba(0, 142, 207, 0.808);
+}
+
+
+@mixin typo {
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: rgba(16, 133, 230, 0.808);
+}
+
+
+@mixin typo1 {
+    font-size: 1em;
+    font-weight: bolder;
+    color: rgba(3, 201, 184, 0.808);
+}
